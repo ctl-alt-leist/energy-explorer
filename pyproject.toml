@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "energy_explorer"
+version = "0.1.0"
+description = "An exercise in exploring California's energy storage."
+authors = ["B. Leist"]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+jupyter = "*"
+matplotlib = "*"
+numpy = "*"
+pandas = "*"
+pydantic = "*"
+seaborn = "^0.13.2"
+geopandas = "^1.0.1"
+cartopy = "^0.24.1"
+pgeocode = "^0.5.0"
+scipy = "^1.14.1"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+flake8 = "*"
+isort = "*"
+pytest = "*"
+ipython = "*"
+pre-commit = "*"
+python-lsp-server = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
