@@ -54,3 +54,10 @@ components (mostly in the form of CONST variable types) which modify how the dat
   storage systems.
 - run_similarity.py: Computes similarity scores between capacity growth rates and predicts future trends based on
   similar patterns.
+
+More directly, to see the final resulting analysis, please execute the `notebook/run_similarity.py` script.  This
+produces two figures which are discussed in the presentation slides.
+
+```bash
+poetry run python notebook/run_similarity.py
+```
