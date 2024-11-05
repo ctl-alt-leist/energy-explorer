@@ -1,6 +1,7 @@
 # CA Energy Storage and Capacity: Exploratory Data Analysis
 
-This project is a Python-based analysis of California’s energy storage data.
+This project is a Python-based analysis of California’s energy storage data. The accompanying presentation for this work
+is located in `docs/` as both a PowerPoint and PDF.
 
 ## Installation and Environment
 
