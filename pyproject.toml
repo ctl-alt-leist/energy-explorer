@@ -16,6 +16,7 @@ geopandas = "^1.0.1"
 cartopy = "^0.24.1"
 pgeocode = "^0.5.0"
 scipy = "^1.14.1"
+scikit-learn = "^1.5.2"
 
 [tool.poetry.dev-dependencies]
 black = "*"

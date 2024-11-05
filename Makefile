@@ -3,6 +3,11 @@ BLACK_ARGS := --line-length 120
 ISORT_ARGS := --lines-after-imports 2
 LINT_PATHS := energy_explorer/ notebook/
 
+preview-readme:
+	@echo "Generating PDF preview of README.md...";
+	pandoc README.md -o docs/README.pdf --pdf-engine=xelatex -V geometry:margin=1in -V fontsize=12pt -V colorlinks;
+	open docs/README.pdf;
+
 activate:
 	poetry shell
 
