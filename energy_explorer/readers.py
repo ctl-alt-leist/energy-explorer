@@ -6,7 +6,7 @@ from typing import List, Tuple, Type, Union
 from warnings import catch_warnings, simplefilter
 
 from numpy import array, genfromtxt, recarray
-from pandas import DataFrame, read_csv
+from pandas import DataFrame, isna, read_csv, to_datetime
 
 
 ColumnType = Union[List[Tuple[str, Type]], Type]
@@ -43,10 +43,13 @@ def load_csv_dataframe(file_path: str, columns: ColumnType = None, tzinfo=None) 
         parse_dates=[name for name, dtype in column_formats if dtype == datetime],
     )
 
-    # Set timezone for datetime columns
+    # Ensure datetime columns are properly converted and set timezone
     for name, dtype in column_formats:
         if dtype == datetime:
-            df[name] = df[name].apply(lambda dt: dt.replace(tzinfo=tzinfo) if dt.tzinfo is None else dt)
+            df[name] = to_datetime(df[name], errors="coerce")  # Convert to datetime, handling errors
+            df[name] = df[name].apply(
+                lambda dt: dt.replace(tzinfo=tzinfo) if not isna(dt) and dt.tzinfo is None else dt
+            )
 
     return df
 
