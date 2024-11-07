@@ -128,7 +128,7 @@ if __name__ == "__main__":
         fig_a.savefig("figures/steel_data/time_series_full.png")
 
     # Plot CO2 heatmap (select columns)
-    if True:
+    if False:
         fig_b = plot_co2_heatmap(frame, x_column=("real_energy", "kWh"), y_column=("reactive_energy_lagging", "kVarh"))
         fig_b.savefig("figures/steel_data/co2_heat_map.png")
 

@@ -3,6 +3,9 @@
 This project is a Python-based analysis of California’s energy storage data. The accompanying presentation for this work
 is located in `docs/` as both a PowerPoint and PDF.
 
+The additional exercise exploring "Steel Industry Data" has been added to the `notebook/` folder in a single module
+`notebook/power_explorer.py`. It is a stand-alone executable, which only makes use of the `readers.py` module for CSV.
+
 ## Installation and Environment
 
 This project makes us of [Poetry](https://python-poetry.org/) to manage the dependencies and the environment. Once
